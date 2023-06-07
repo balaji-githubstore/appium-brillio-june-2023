@@ -9,6 +9,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.android.AndroidDriver;
 
 public class Demo3SignupTest {
 
@@ -30,7 +31,7 @@ public class Demo3SignupTest {
 
 		cap.setCapability("bstack:options", bstackDetails);
 
-		AppiumDriver driver = new AppiumDriver(new URL("http://hub.browserstack.com/wd/hub"), cap);
+		AndroidDriver driver = new AndroidDriver(new URL("http://hub.browserstack.com/wd/hub"), cap);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		
 		driver.findElement(AppiumBy.xpath("//android.widget.TextView[@text='Dismiss']")).click();
@@ -44,9 +45,35 @@ public class Demo3SignupTest {
 		
 		driver.findElement(AppiumBy.xpath("//android.widget.EditText[@text='First name']")).sendKeys("john");
 		
-		//enter lastname as wick
-		//enter email wick@gmail.com
-		//enter password as welcome123
+		driver.findElement(AppiumBy.xpath("//android.widget.EditText[@text='Last name']")).sendKeys("wick");
+		
+		//birthday
+		//approach 1
+		//driver.findElement(AppiumBy.xpath("//android.widget.TextView[@text='Birthday']")).sendKeys("December 20, 1998");
+		
+		//approach 2
+		driver.findElement(AppiumBy.xpath("//android.widget.TextView[@text='Birthday']")).click();
+		
+		driver.findElement(AppiumBy.xpath("(//*[@resource-id='android:id/numberpicker_input'])[1]")).click();
+		driver.findElement(AppiumBy.xpath("(//*[@resource-id='android:id/numberpicker_input'])[1]")).clear();
+		driver.findElement(AppiumBy.xpath("(//*[@resource-id='android:id/numberpicker_input'])[1]")).sendKeys("Dec");
+		
+		driver.findElement(AppiumBy.xpath("(//*[@resource-id='android:id/numberpicker_input'])[2]")).click();
+		driver.findElement(AppiumBy.xpath("(//*[@resource-id='android:id/numberpicker_input'])[2]")).clear();
+		driver.findElement(AppiumBy.xpath("(//*[@resource-id='android:id/numberpicker_input'])[2]")).sendKeys("20");
+		
+		driver.findElement(AppiumBy.xpath("(//*[@resource-id='android:id/numberpicker_input'])[3]")).click();
+		driver.findElement(AppiumBy.xpath("(//*[@resource-id='android:id/numberpicker_input'])[3]")).clear();
+		driver.findElement(AppiumBy.xpath("(//*[@resource-id='android:id/numberpicker_input'])[3]")).sendKeys("1997");
+		
+		driver.findElement(AppiumBy.xpath("//*[@text='OK']")).click();
+		
+		
+		driver.findElement(AppiumBy.xpath("//android.widget.EditText[contains(@text,'Email')]")).sendKeys("john@gmail.com");
+		
+		driver.findElement(AppiumBy.xpath("//android.widget.EditText[@content-desc='Password']")).sendKeys("john123");
+		
+		
 		
 		
 		driver.quit();
