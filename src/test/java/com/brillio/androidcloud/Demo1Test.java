@@ -7,9 +7,13 @@ import java.util.HashMap;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import io.appium.java_client.AppiumDriver;
-
+/**
+ * Connecting to Browser stack Cloud device
+ * @param args
+ * @throws MalformedURLException
+ */
 public class Demo1Test {
-
+	
 	public static void main(String[] args) throws MalformedURLException {
 		
 		DesiredCapabilities cap = new DesiredCapabilities();
