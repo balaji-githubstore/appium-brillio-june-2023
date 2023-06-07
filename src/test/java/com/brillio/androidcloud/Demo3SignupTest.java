@@ -42,7 +42,7 @@ public class Demo3SignupTest {
 		
 		driver.findElement(AppiumBy.xpath("//android.widget.TextView[@text='Sign up with email']")).click();
 		
-		driver.findElement(AppiumBy.xpath("//android.widget.TextView[@text='Sign up with email']")).sendKeys("john");
+		driver.findElement(AppiumBy.xpath("//android.widget.EditText[@text='First name']")).sendKeys("john");
 		
 		//enter lastname as wick
 		//enter email wick@gmail.com
