@@ -53,6 +53,13 @@ public class Demo5_MobileCommandScrollTest {
 		
 		
 		//scroll and click on Prayer wheel
+		HashMap<String, String> map3 = new HashMap<>();
+		map3.put("strategy", "-android uiautomator");
+		map3.put("selector", "UiSelector().textContains(\"wheel\")");
+
+		driver.executeScript("mobile: scroll", map3);
+
+		driver.findElement(AppiumBy.androidUIAutomator("UiSelector().text(\"Prayer wheel\")")).click();
 
 		Thread.sleep(5000);
 
