@@ -8,6 +8,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.android.AndroidDriver;
 
 public class Demo2NativeAppTest {
 
@@ -22,13 +23,13 @@ public class Demo2NativeAppTest {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		
 		
+				
 		driver.findElement(AppiumBy.xpath("//android.widget.TextView[@text='Dismiss']")).click();
 		
 		driver.findElement(AppiumBy.xpath("//android.widget.TextView[@text='Sign in']")).click();
 		
 		//click on sign in again 
 		driver.findElement(AppiumBy.xpath("//android.widget.TextView[@text='Sign in']")).click();
-		
 		
 		//enter username as john@gmail.com
 		driver.findElement(AppiumBy.xpath("//android.widget.EditText[contains(@text,'address or')]")).sendKeys("john@gmail.com");

@@ -74,8 +74,6 @@ public class Demo3SignupTest {
 		driver.findElement(AppiumBy.xpath("//android.widget.EditText[@content-desc='Password']")).sendKeys("john123");
 		
 		
-		
-		
 		driver.quit();
 	}
 
