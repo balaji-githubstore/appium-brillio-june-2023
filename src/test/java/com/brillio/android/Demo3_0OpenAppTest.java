@@ -9,7 +9,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.AppiumDriver;
 
-public class Demo3OpenAppTest {
+public class Demo3_0OpenAppTest {
 
 	public static void main(String[] args) throws MalformedURLException, InterruptedException {
 
