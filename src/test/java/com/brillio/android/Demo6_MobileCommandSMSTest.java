@@ -8,7 +8,11 @@ import java.util.HashMap;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import io.appium.java_client.AppiumDriver;
-
+/**
+ * Read SMS, Battery info, notification using Mobile Command UiAutomator2 driver
+ * @author Balaji Dinakaran
+ *
+ */
 public class Demo6_MobileCommandSMSTest {
 
 	public static void main(String[] args) throws MalformedURLException {

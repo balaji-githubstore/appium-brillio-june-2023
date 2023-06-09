@@ -9,7 +9,11 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
-
+/**
+ * Scroll using Mobile Command using Mobile Command UiAutomator2 driver
+ * @author Balaji Dinakaran
+ *
+ */
 public class Demo5_MobileCommandScrollTest {
 
 	public static void main(String[] args) throws MalformedURLException, InterruptedException {
