@@ -22,7 +22,8 @@ public class Demo5_MobileCommandScrollTest {
 		AndroidDriver driver = new AndroidDriver(new URL("http://localhost:4723/wd/hub"), cap);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 
-		if (driver.findElements(AppiumBy.xpath("//android.widget.TextView[@text='Dismiss']")).size() > 0) {
+		if (driver.findElements(AppiumBy.xpath("//android.widget.TextView[@text='Dismiss']")).size() > 0) 
+		{
 			driver.findElement(AppiumBy.xpath("//android.widget.TextView[@text='Dismiss']")).click();
 		}
 
