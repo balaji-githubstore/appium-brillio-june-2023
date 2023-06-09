@@ -16,7 +16,7 @@ import io.appium.java_client.android.AndroidDriver;
 
 public class Demo7_ActionsScrollTest {
 
-	public static void main(String[] args) throws MalformedURLException {
+	public static void main(String[] args) throws MalformedURLException, InterruptedException {
 		
 		DesiredCapabilities cap = new DesiredCapabilities();
 		cap.setCapability("platformName", "android");
@@ -40,14 +40,44 @@ public class Demo7_ActionsScrollTest {
 		
 		PointerInput finger=new PointerInput(Kind.TOUCH, "finger");
 		
-		//scroll until Art of Asia is present 
+		//scroll until Art of Asia is present
 		
-		actions.tick(finger.createPointerMove(Duration.ofMillis(0), PointerInput.Origin.viewport(),839, 1157))
-		.tick(finger.createPointerDown(PointerInput.MouseButton.MIDDLE.asArg()))
-		.tick(new Pause(finger, Duration.ofMillis(600)))
-		.tick(finger.createPointerMove(Duration.ofMillis(600), PointerInput.Origin.viewport(),877, 751))
-		.tick(finger.createPointerDown(PointerInput.MouseButton.MIDDLE.asArg()))
-		.build().perform();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(0));
+
+		while(driver.findElements(AppiumBy.xpath("//*[@text='Art of Asia']")).size()==0)
+		{
+			actions.tick(finger.createPointerMove(Duration.ofMillis(0), PointerInput.Origin.viewport(),839, 1157))
+			.tick(finger.createPointerDown(PointerInput.MouseButton.MIDDLE.asArg()))
+			.tick(new Pause(finger, Duration.ofMillis(600)))
+			.tick(finger.createPointerMove(Duration.ofMillis(600), PointerInput.Origin.viewport(),877, 751))
+			.tick(finger.createPointerUp(PointerInput.MouseButton.MIDDLE.asArg()))
+			.build().perform();
+		}
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+		
+		driver.findElement(AppiumBy.xpath("//*[@text='Art of Asia']")).click();
+		
+		
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(0));
+
+		while(driver.findElements(AppiumBy.xpath("//*[contains(@text,'The Hima')]")).size()==0)
+		{
+			actions.tick(finger.createPointerMove(Duration.ofMillis(0), PointerInput.Origin.viewport(),839, 1157))
+			.tick(finger.createPointerDown(PointerInput.MouseButton.MIDDLE.asArg()))
+			.tick(new Pause(finger, Duration.ofMillis(600)))
+			.tick(finger.createPointerMove(Duration.ofMillis(600), PointerInput.Origin.viewport(),877, 751))
+			.tick(finger.createPointerUp(PointerInput.MouseButton.MIDDLE.asArg()))
+			.build().perform();
+		}
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+		
+		driver.findElement(AppiumBy.xpath("//*[contains(@text,'The Hima')]")).click();
+		
+		
+		
+		Thread.sleep(5000);
+		
+		driver.quit();
 		
 
 	}
