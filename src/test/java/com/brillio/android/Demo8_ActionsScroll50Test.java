@@ -17,6 +17,7 @@ public class Demo8_ActionsScroll50Test {
 		DesiredCapabilities cap = new DesiredCapabilities();
 		cap.setCapability("platformName", "android");
 		cap.setCapability("appium:deviceName", "mydevice-redmi");
+		cap.setCapability("udid", "emulator-5559");
 //		cap.setCapability("appium:app", "C:\\Components\\khan-academy-7-3-2.apk");
 //		cap.setCapability("noReset", true);
 

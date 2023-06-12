@@ -15,7 +15,7 @@ import io.appium.java_client.AppiumBy;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
 
-public class Demo7_ActionsScrollTest {
+public class Demo4_ActionsScrollTest {
 
 	public static void main(String[] args) throws MalformedURLException, InterruptedException {
 		

@@ -13,6 +13,8 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.touch.WaitOptions;
+import io.appium.java_client.touch.offset.PointOption;
 /**
  * Scroll using Actions class - Latest steps to scroll using Appium
  * @author Balaji Dinakaran
@@ -40,6 +42,18 @@ public class Demo7_ActionsScrollTest {
 
 		driver.findElement(AppiumBy.xpath("//*[@text='Arts and humanities']")).click();
 		
+		
+		//below code is not recommended as it is depreciated
+		
+//		(new TouchAction(driver))
+//		  .press(PointOption.point(839, 1157))
+//		  .waitAction(WaitOptions.waitOptions(Duration.ofMillis(600))))
+//		  .moveTo(PointOption.point(877, 751))
+//		  .release()
+//		  .perform();
+
+		
+		//New code for scroll, tap, long press using Actions class
 		Actions actions=new Actions(driver);
 		
 		PointerInput finger=new PointerInput(Kind.TOUCH, "finger");
@@ -50,10 +64,10 @@ public class Demo7_ActionsScrollTest {
 
 		while(driver.findElements(AppiumBy.xpath("//*[@text='Art of Asia']")).size()==0)
 		{
-			actions.tick(finger.createPointerMove(Duration.ofMillis(0), PointerInput.Origin.viewport(),839, 1157))
+			actions.tick(finger.createPointerMove(Duration.ofMillis(0), PointerInput.Origin.viewport(),686, 958))
 			.tick(finger.createPointerDown(PointerInput.MouseButton.MIDDLE.asArg()))
 			.tick(new Pause(finger, Duration.ofMillis(600)))
-			.tick(finger.createPointerMove(Duration.ofMillis(600), PointerInput.Origin.viewport(),877, 751))
+			.tick(finger.createPointerMove(Duration.ofMillis(600), PointerInput.Origin.viewport(),684, 456))
 			.tick(finger.createPointerUp(PointerInput.MouseButton.MIDDLE.asArg()))
 			.build().perform();
 		}
@@ -66,10 +80,10 @@ public class Demo7_ActionsScrollTest {
 
 		while(driver.findElements(AppiumBy.xpath("//*[contains(@text,'The Hima')]")).size()==0)
 		{
-			actions.tick(finger.createPointerMove(Duration.ofMillis(0), PointerInput.Origin.viewport(),839, 1157))
+			actions.tick(finger.createPointerMove(Duration.ofMillis(0), PointerInput.Origin.viewport(),686, 958))
 			.tick(finger.createPointerDown(PointerInput.MouseButton.MIDDLE.asArg()))
 			.tick(new Pause(finger, Duration.ofMillis(600)))
-			.tick(finger.createPointerMove(Duration.ofMillis(600), PointerInput.Origin.viewport(),877, 751))
+			.tick(finger.createPointerMove(Duration.ofMillis(600), PointerInput.Origin.viewport(),684, 456))
 			.tick(finger.createPointerUp(PointerInput.MouseButton.MIDDLE.asArg()))
 			.build().perform();
 		}
