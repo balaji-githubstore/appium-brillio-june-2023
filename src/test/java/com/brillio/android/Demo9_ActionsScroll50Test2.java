@@ -17,6 +17,7 @@ import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
 /**
  * Scroll using Actions class exactly 50% - Latest steps to scroll using Appium
+ * Recommended in latest version
  * @author Balaji Dinakaran
  *
  */
