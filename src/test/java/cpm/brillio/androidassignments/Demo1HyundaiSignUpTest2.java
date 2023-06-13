@@ -24,6 +24,8 @@ public class Demo1HyundaiSignUpTest2 {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		
 		driver.installApp("C:\\Components\\com.bsl.hyundai_2021-08-09.apk");
+//		driver.installApp("C:\\Components\\com.bsl.hyundai_2021-08-09.apk");
+//		driver.installApp("C:\\Components\\com.bsl.hyundai_2021-08-09.apk");
 		
 		driver.activateApp("com.bsl.hyundai");
 		

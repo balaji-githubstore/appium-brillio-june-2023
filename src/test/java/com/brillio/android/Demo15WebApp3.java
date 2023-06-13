@@ -47,7 +47,7 @@ public class Demo15WebApp3 {
 		driver.findElement(AppiumBy.xpath("//input[@name='email']")).sendKeys("hello everyone");
 		//enter password as test123
 		//Click on login
-		
+	
 		
 		Thread.sleep(5000);
 		

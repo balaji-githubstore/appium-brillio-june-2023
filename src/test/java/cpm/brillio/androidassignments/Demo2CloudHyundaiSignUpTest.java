@@ -5,6 +5,7 @@ import java.net.URL;
 import java.time.Duration;
 import java.util.HashMap;
 
+import org.openqa.selenium.ScreenOrientation;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import io.appium.java_client.AppiumBy;
@@ -32,11 +33,13 @@ public class Demo2CloudHyundaiSignUpTest {
 		bstackDetails.put("accessKey", "6yXRE4nK1fyvTHWA2kPD");
 
 		cap.setCapability("bstack:options", bstackDetails);
+		cap.setCapability("orientation", ScreenOrientation.PORTRAIT);
 
 		AndroidDriver driver = new AndroidDriver(new URL("http://hub.browserstack.com/wd/hub"), cap);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
-		
+//		driver.runAppInBackground(Duration.ofSeconds(20));
+
 //		driver.installApp("C:\\Components\\com.bsl.hyundai_2021-08-09.apk");
 		
 //		driver.activateApp("com.bsl.hyundai");
