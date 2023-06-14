@@ -1,4 +1,4 @@
-package cpm.brillio.androidassignments;
+package com.brillio.androidassignments;
 
 import java.net.MalformedURLException;
 import java.net.URL;
