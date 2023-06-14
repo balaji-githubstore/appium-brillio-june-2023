@@ -1,24 +1,24 @@
-2023-06-14 05:39:17:597 [Appium] Welcome to Appium v1.22.3
-2023-06-14 05:39:17:598 [Appium] Non-default server args:
-2023-06-14 05:39:17:599 [Appium]   port: 8989
-2023-06-14 05:39:17:599 [Appium]   basePath: /wd/hub/
-2023-06-14 05:39:17:599 [Appium]   logFile: /Users/balaji/Documents/Company/Brillio June 2023 Mac/appium_workspace/Mobile Automation/logs/appiumlog.log
-2023-06-14 05:39:17:623 [Appium] Appium REST http interface listener started on 0.0.0.0:8989
-2023-06-14 05:39:17:857 [HTTP] --> GET /wd/hub/status
-2023-06-14 05:39:17:857 [HTTP] {}
-2023-06-14 05:39:17:859 [GENERIC] Calling AppiumDriver.getStatus() with args: []
-2023-06-14 05:39:17:860 [GENERIC] Responding to client with driver.getStatus() result: {"build":{"version":"1.22.3"}}
-2023-06-14 05:39:17:871 [HTTP] <-- GET /wd/hub/status 200 8 ms - 68
-2023-06-14 05:39:17:871 [HTTP] 
-2023-06-14 05:39:17:876 [HTTP] --> GET /wd/hub/status
-2023-06-14 05:39:17:876 [HTTP] {}
-2023-06-14 05:39:17:877 [GENERIC] Calling AppiumDriver.getStatus() with args: []
-2023-06-14 05:39:17:877 [GENERIC] Responding to client with driver.getStatus() result: {"build":{"version":"1.22.3"}}
-2023-06-14 05:39:17:878 [HTTP] <-- GET /wd/hub/status 200 1 ms - 68
-2023-06-14 05:39:17:878 [HTTP] 
-2023-06-14 05:39:17:881 [Appium] Received SIGTERM - shutting down
-2023-06-14 05:39:17:881 [Appium] There are no active sessions for cleanup
-2023-06-14 05:39:17:883 uncaughtException: write EPIPE
+2023-06-14 05:51:03:170 [Appium] Welcome to Appium v1.22.3
+2023-06-14 05:51:03:171 [Appium] Non-default server args:
+2023-06-14 05:51:03:172 [Appium]   port: 25575
+2023-06-14 05:51:03:172 [Appium]   basePath: /wd/hub/
+2023-06-14 05:51:03:172 [Appium]   logFile: /Users/balaji/Documents/Company/Brillio June 2023 Mac/appium_workspace/Mobile Automation/logs/appiumlog.log
+2023-06-14 05:51:03:193 [Appium] Appium REST http interface listener started on 0.0.0.0:25575
+2023-06-14 05:51:03:461 [HTTP] --> GET /wd/hub/status
+2023-06-14 05:51:03:461 [HTTP] {}
+2023-06-14 05:51:03:462 [GENERIC] Calling AppiumDriver.getStatus() with args: []
+2023-06-14 05:51:03:464 [GENERIC] Responding to client with driver.getStatus() result: {"build":{"version":"1.22.3"}}
+2023-06-14 05:51:03:468 [HTTP] <-- GET /wd/hub/status 200 6 ms - 68
+2023-06-14 05:51:03:469 [HTTP] 
+2023-06-14 05:51:03:472 [HTTP] --> GET /wd/hub/status
+2023-06-14 05:51:03:472 [HTTP] {}
+2023-06-14 05:51:03:472 [GENERIC] Calling AppiumDriver.getStatus() with args: []
+2023-06-14 05:51:03:473 [GENERIC] Responding to client with driver.getStatus() result: {"build":{"version":"1.22.3"}}
+2023-06-14 05:51:03:474 [HTTP] <-- GET /wd/hub/status 200 2 ms - 68
+2023-06-14 05:51:03:474 [HTTP] 
+2023-06-14 05:51:03:476 [Appium] Received SIGTERM - shutting down
+2023-06-14 05:51:03:477 [Appium] There are no active sessions for cleanup
+2023-06-14 05:51:03:479 uncaughtException: write EPIPE
 Error: write EPIPE
     at afterWriteDispatched (node:internal/stream_base_commons:160:15)
     at writeGeneric (node:internal/stream_base_commons:151:3)
@@ -36,7 +36,7 @@ Error: write EPIPE
     at DerivedLogger.emit (node:events:525:35)
     at addChunk (/usr/local/lib/node_modules/appium/node_modules/readable-stream/lib/_stream_readable.js:298:12)
     at readableAddChunk (/usr/local/lib/node_modules/appium/node_modules/readable-stream/lib/_stream_readable.js:280:11)
-2023-06-14 05:39:17:884 uncaughtException: write EPIPE
+2023-06-14 05:51:03:480 uncaughtException: write EPIPE
 Error: write EPIPE
     at afterWriteDispatched (node:internal/stream_base_commons:160:15)
     at writeGeneric (node:internal/stream_base_commons:151:3)
@@ -54,7 +54,7 @@ Error: write EPIPE
     at DerivedLogger.emit (node:events:525:35)
     at addChunk (/usr/local/lib/node_modules/appium/node_modules/readable-stream/lib/_stream_readable.js:298:12)
     at readableAddChunk (/usr/local/lib/node_modules/appium/node_modules/readable-stream/lib/_stream_readable.js:280:11)
-2023-06-14 05:39:17:885 uncaughtException: write EPIPE
+2023-06-14 05:51:03:480 uncaughtException: write EPIPE
 Error: write EPIPE
     at afterWriteDispatched (node:internal/stream_base_commons:160:15)
     at writeGeneric (node:internal/stream_base_commons:151:3)
@@ -72,7 +72,7 @@ Error: write EPIPE
     at DerivedLogger.emit (node:events:525:35)
     at addChunk (/usr/local/lib/node_modules/appium/node_modules/readable-stream/lib/_stream_readable.js:298:12)
     at readableAddChunk (/usr/local/lib/node_modules/appium/node_modules/readable-stream/lib/_stream_readable.js:280:11)
-2023-06-14 05:39:17:886 uncaughtException: write EPIPE
+2023-06-14 05:51:03:481 uncaughtException: write EPIPE
 Error: write EPIPE
     at afterWriteDispatched (node:internal/stream_base_commons:160:15)
     at writeGeneric (node:internal/stream_base_commons:151:3)
@@ -90,7 +90,7 @@ Error: write EPIPE
     at DerivedLogger.emit (node:events:525:35)
     at addChunk (/usr/local/lib/node_modules/appium/node_modules/readable-stream/lib/_stream_readable.js:298:12)
     at readableAddChunk (/usr/local/lib/node_modules/appium/node_modules/readable-stream/lib/_stream_readable.js:280:11)
-2023-06-14 05:39:17:886 uncaughtException: write EPIPE
+2023-06-14 05:51:03:482 uncaughtException: write EPIPE
 Error: write EPIPE
     at afterWriteDispatched (node:internal/stream_base_commons:160:15)
     at writeGeneric (node:internal/stream_base_commons:151:3)
@@ -108,7 +108,7 @@ Error: write EPIPE
     at DerivedLogger.emit (node:events:525:35)
     at addChunk (/usr/local/lib/node_modules/appium/node_modules/readable-stream/lib/_stream_readable.js:298:12)
     at readableAddChunk (/usr/local/lib/node_modules/appium/node_modules/readable-stream/lib/_stream_readable.js:280:11)
-2023-06-14 05:39:17:887 uncaughtException: write EPIPE
+2023-06-14 05:51:03:482 uncaughtException: write EPIPE
 Error: write EPIPE
     at afterWriteDispatched (node:internal/stream_base_commons:160:15)
     at writeGeneric (node:internal/stream_base_commons:151:3)
