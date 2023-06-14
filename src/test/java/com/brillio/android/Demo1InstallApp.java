@@ -14,7 +14,7 @@ public class Demo1InstallApp {
 		DesiredCapabilities cap=new DesiredCapabilities();
 		cap.setCapability("platformName", "android");
 		cap.setCapability("appium:deviceName", "ASSSFFSF");
-		cap.setCapability("appium:app", "C:\\Components\\khan-academy-7-3-2.apk");
+		//cap.setCapability("appium:app", "C:\\Components\\khan-academy-7-3-2.apk");
 		
 		AppiumDriver driver=new AppiumDriver(new URL("http://localhost:4723/wd/hub"),cap);
 		
