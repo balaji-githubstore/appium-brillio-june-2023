@@ -115,8 +115,9 @@ public class Demo2NativeAppTestScroll {
 		PointerInput finger = new PointerInput(Kind.TOUCH, "finger");
 
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(0));
-		//scroll logic based on element visiblity
-		while (driver.findElement(AppiumBy.xpath("//XCUIElementTypeStaticText[contains(@name,'Card')]")).isDisplayed()==false) {
+		//Element should be present. Scroll logic based on element visibility
+		while (driver.findElement(AppiumBy.xpath("//XCUIElementTypeStaticText[contains(@name,'Card')]")).isDisplayed()==false) 
+		{
 			actions.tick(finger.createPointerMove(Duration.ofMillis(0), PointerInput.Origin.viewport(), x1, y1))
 					.tick(finger.createPointerDown(PointerInput.MouseButton.MIDDLE.asArg()))
 					.tick(new Pause(finger, Duration.ofMillis(600)))

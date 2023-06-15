@@ -15,7 +15,7 @@ import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.ios.IOSDriver;
 
-public class Demo2NativeApp {
+public class Demo2NativeAppScrollActions {
 
 	public static void main(String[] args) throws MalformedURLException {
 		
