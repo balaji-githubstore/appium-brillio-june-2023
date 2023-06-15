@@ -31,7 +31,7 @@ public class Demo11LongPressTest2 {
 		driver.findElement(AppiumBy.xpath("//*[@text='Analytics']")).click();
 		
 		Point point=driver.findElement(AppiumBy.xpath("//*[@text='Package name']")).getLocation();
-		
+//		driver.installApp(null)
 		System.out.println(point.x);
 		System.out.println(point.y);
 
