@@ -9,14 +9,13 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
-/**
- * Hybrid app - 
- * driver.context("WEBVIEW_chrome");  --> when you know the exact context
- */
-public class Demo16HybridApp {
 
-	public static void main(String[] args) throws MalformedURLException, InterruptedException {
-		
+/**
+ * Logic to find the element's exact view 
+ */
+public class Demo17HybridApp {
+
+	public static void main(String[] args) throws MalformedURLException {
 		DesiredCapabilities cap = new DesiredCapabilities();
 		cap.setCapability("platformName", "android");
 		cap.setCapability("appium:deviceName", "mydevice-redmi");
@@ -28,35 +27,37 @@ public class Demo16HybridApp {
 		AndroidDriver driver = new AndroidDriver(new URL("http://localhost:4723/wd/hub"), cap);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		
-//android native app - uiautomator2driver - for handling xml (app source)
-//web app - chromedriver,safaridriver - for handling html (page source) 
-		
 		driver.activateApp("com.docusign.ink");
 		
 		driver.findElement(AppiumBy.xpath("//android.widget.Button[@text='Log In']")).click();
+	
+		System.out.println("Current Context Detail ");
+		System.out.println(driver.getContext());
 		
-		Thread.sleep(5000);
-		//gives all the view present in the current screen 
+		System.out.println("All Context Detail ");
 		System.out.println(driver.getContextHandles());
 		
-		String pageSource=driver.getPageSource();
-		//setting the context to webview
-		driver.context("WEBVIEW_chrome");
+		//will switch the context and check for given xpath & stays on that view
+		for(String appContext : driver.getContextHandles())
+		{
+			System.out.println(appContext);
+			driver.context(appContext);
+			if(driver.findElements(AppiumBy.xpath("//*[@placeholder='Enter email']")).size()>0)
+			{
+				break;
+			}
+		}
 		
-		pageSource=driver.getPageSource();
+		
+		System.out.println("Current Context Detail ");
+		System.out.println(driver.getContext());
 		
 		driver.findElement(By.xpath("//*[@placeholder='Enter email']")).sendKeys("john@gmail.com");
 		driver.findElement(By.xpath("//*[@data-qa='submit-username']")).click();
 		
 		driver.findElement(By.xpath("//*[@placeholder='Enter password']")).sendKeys("john211");
 		
-		//click on login 
-		
-		//switching back to native view after successful login 
-		driver.context("NATIVE_APP");
 		driver.quit();
-		//will start at 11 AM IST
-		
 	}
 
 }
