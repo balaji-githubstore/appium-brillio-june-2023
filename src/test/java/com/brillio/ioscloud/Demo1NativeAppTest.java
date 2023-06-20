@@ -9,7 +9,9 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.ios.IOSDriver;
-
+/**
+ * Simulator
+ */
 public class Demo1NativeAppTest {
 
 	public static void main(String[] args) throws MalformedURLException {

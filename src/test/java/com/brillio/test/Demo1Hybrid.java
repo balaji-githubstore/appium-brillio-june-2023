@@ -9,7 +9,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
 
-public class Demo1 {
+public class Demo1Hybrid {
 	
 	public static void main(String[] args) throws MalformedURLException, InterruptedException {
 		

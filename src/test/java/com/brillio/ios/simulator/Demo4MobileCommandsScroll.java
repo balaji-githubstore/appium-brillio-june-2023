@@ -1,4 +1,4 @@
-package com.brillio.ios;
+package com.brillio.ios.simulator;
 
 import java.net.MalformedURLException;
 import java.net.URL;

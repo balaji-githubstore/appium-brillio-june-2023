@@ -1,4 +1,4 @@
-package com.brillio.ios;
+package com.brillio.ios.simulator;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -15,7 +15,7 @@ import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.ios.IOSDriver;
 
-public class Demo3InsallApp {
+public class Demo3_0InsallApp {
 
 	public static void main(String[] args) throws MalformedURLException {
 		
@@ -24,7 +24,9 @@ public class Demo3InsallApp {
 		cap.setCapability("deviceName", "iPhone 14 Pro Max");
 		cap.setCapability("platformVersion", "16.4");
 
-		cap.setCapability("app", "/Users/balaji/Documents/Component/demoapp.ipa");
+		//for simulator - need to use .app file
+		//for real device - need to ask for .ipa file
+		cap.setCapability("app", "/Users/balaji/Documents/Component/saucelab_app.app");
 
 
 		IOSDriver driver = new IOSDriver(new URL("http://localhost:4723/wd/hub"), cap);
